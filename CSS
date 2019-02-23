@@ -1,0 +1,19 @@
+select{
+display: block;
+margin: 0 auto;
+}
+button{
+  display: block;
+  margin: 0 auto;
+}
+div2{
+  display:inline-block;
+}
+div1{
+    color:rgb(50,154,104);
+  font-size: 35px;
+  text-align: center;
+}
+div3{
+  display:inline-block;
+}
