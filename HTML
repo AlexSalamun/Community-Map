@@ -5,6 +5,28 @@
   <p>Please update this map as needed at this link
   <a href="https://www.google.com/maps/d/edit?mid=1xsovLllotkUPMCtrA94ybyqXpHEbMXk2&ll=43.032554982195904%2C-87.91394250000002&z=18">here</a> <br></div1>
    <div2>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Get current coordinates</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
    <iframe id="homelessForm" src="https://docs.google.com/forms/d/e/1FAIpQLSfITap_h7QIDcsZU4mwWo1SF3NDRpKFjKxVuimV03QbjtMnCw/viewform?embedded=true" width="640" height="871" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
    <iframe id="strayForm" src="https://docs.google.com/forms/d/e/1FAIpQLScsUz_LSfZgU1_n8EtbxpKC2uNklCQLtTICufUrH0J6MKssHg/viewform?embedded=true" width="640" height="869" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></div2>
     <div3>
